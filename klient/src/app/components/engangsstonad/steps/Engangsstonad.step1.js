@@ -15,7 +15,7 @@ export const Step1 = () => (
         <AlertStripe className={styles.marginTopBottom} type="nav-ansatt">Her har vi noe info</AlertStripe>
         <IconWithText kind="arbeidsgiver" text="Placeholder" />
         <Undertittel className={styles.marginTopBottom}>Placeholder</Undertittel>
-        <Element className={styles.marginTopBottom}>Placeholder</Element>
+        <Element className={styles.marginTopBottom}>Plassholder</Element>
         <DisplayTextWithLabel label="Placeholder" text="Placeholder" />
         <Radio className={styles.marginTopBottom} label="Placeholder" name="placeholder-gruppe" />
     </ElementWrapper>

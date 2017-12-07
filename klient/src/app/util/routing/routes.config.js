@@ -8,10 +8,10 @@ const routeConfig = [
         exact: true
     },
     {
-        path: '/engangsstonad',
+        path: '/gjenlevende',
         component: EngangsstonadIndex,
         routes: engangsstonadSteps.map((step) => ({
-            path: `/engangsstonad/${step.name.toLowerCase()}`,
+            path: `/gjenlevende/${step.name.toLowerCase()}`,
             component: step
         }))
     }

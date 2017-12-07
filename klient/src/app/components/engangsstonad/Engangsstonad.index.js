@@ -20,7 +20,7 @@ const EngangsstonadIndex = (props: Props) => {
     const routes = renderRoutes();
 
     return (
-        <StepBasedForm routes={routes} title="Søknad for engangsstønad" />
+        <StepBasedForm routes={routes} title="Søknad om Gjenlevende" />
     );
 };
 
