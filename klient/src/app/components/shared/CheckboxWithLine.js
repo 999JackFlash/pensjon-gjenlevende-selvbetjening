@@ -22,7 +22,7 @@ export const CheckboxWithLine = (props: Props) => {
         <div className={classNames('flexContainer', className)}>
             <Checkbox label=" " />
             <div className={styles.content}>
-                {props.content.map((entry) => <DisplayTextWithLabel label={entry.label} text={entry.text} />)}
+                {props.content.map((entry) => <DisplayTextWithLabel labelCode={entry.label} textCode={entry.text} />)}
             </div>
         </div>
     );

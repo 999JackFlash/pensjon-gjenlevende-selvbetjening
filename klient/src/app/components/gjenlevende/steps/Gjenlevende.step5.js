@@ -4,21 +4,21 @@ import { AlertStripeNavAnsatt } from 'nav-frontend-alertstriper';
 import ElementWrapper from '../../../util/ElementWrapper';
 import OpplysningPanel from '../../shared/OpplysningPanel';
 
-import styles from './engangsstonad.step.less';
+import styles from './gjenlevende.step.less';
 
 
 const opplysningData = [
     {
-        label: 'label',
-        text: 'text'
+        labelCode: 'label',
+        textCode: 'text'
     },
     {
-        label: 'label',
-        text: 'text'
+        labelCode: 'label',
+        textCode: 'text'
     },
     {
-        label: 'label',
-        text: 'text'
+        labelCode: 'label',
+        textCode: 'text'
     }
 ];
 

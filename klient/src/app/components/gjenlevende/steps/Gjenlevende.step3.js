@@ -4,7 +4,7 @@ import { AlertStripeNavAnsatt } from 'nav-frontend-alertstriper';
 
 import ElementWrapper from '../../../util/ElementWrapper';
 
-import styles from './engangsstonad.step.less';
+import styles from './gjenlevende.step.less';
 
 export const Step3 = () => (
     <ElementWrapper>

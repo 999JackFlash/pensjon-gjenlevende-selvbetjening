@@ -1,16 +1,16 @@
-import EngangsstonadIndex from './../../components/engangsstonad/Engangsstonad.index';
-import engangsstonadSteps from './../../components/engangsstonad/steps';
+import GjenlevendeIndex from './../../components/gjenlevende/Gjenlevende.index';
+import gjenlevendeSteps from './../../components/gjenlevende/steps';
 
 const routeConfig = [
     {
         path: '/',
-        component: EngangsstonadIndex,
+        component: GjenlevendeIndex,
         exact: true
     },
     {
         path: '/gjenlevende',
-        component: EngangsstonadIndex,
-        routes: engangsstonadSteps.map((step) => ({
+        component: GjenlevendeIndex,
+        routes: gjenlevendeSteps.map((step) => ({
             path: `/gjenlevende/${step.name.toLowerCase()}`,
             component: step
         }))

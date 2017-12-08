@@ -6,7 +6,7 @@ import ElementWrapper from './../../../util/ElementWrapper';
 import RadioGroup from '../../shared/RadioGroup';
 import OpplysningPanel from '../../shared/OpplysningPanel';
 
-import styles from './engangsstonad.step.less';
+import styles from './gjenlevende.step.less';
 
 const radioData = [
     {
@@ -16,18 +16,18 @@ const radioData = [
     {
         label: `Nei, jeg vil gå videre med denne søknaden og forstår at jeg 
                 mister retten til foreldrepenger hvis søknaden om engangsstønad blir innvilget.`,
-        value: 'engangsstonad'
+        value: 'gjenlevende'
     }
 ];
 
 const opplysningData = [
     {
-        label: 'ARBEIDSGIVER',
-        text: 'Nielsen Strikkfabrikk AS'
+        labelCode: 'ARBEIDSGIVER',
+        textCode: 'Nielsen Strikkfabrikk AS'
     },
     {
-        label: 'STILLINGSPROSENT',
-        text: '100 prosent fast'
+        labelCode: 'STILLINGSPROSENT',
+        textCode: '100 prosent fast'
     }
 ];
 
@@ -37,7 +37,7 @@ export const Step2 = () => (
             className={styles.marginBottomLarge}
             type="nav-ansatt"
         >
-            Dersom du har /haft arbeid/likestilt inntekt så kan du ha rett på foreldrepenger.
+            Gjenlevende gjenlevende gjenlevende gjenlevende gjenlevende gjenlevende gjenlevende.
         </AlertStripe>
         <OpplysningPanel
             iconKind="arbeidsgiver"

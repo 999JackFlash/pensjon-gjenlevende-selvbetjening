@@ -6,7 +6,7 @@ import AlertStripe from 'nav-frontend-alertstriper';
 import CheckboxWithLine from '../../shared/CheckboxWithLine';
 import ElementWrapper from '../../../util/ElementWrapper';
 
-import styles from './engangsstonad.step.less';
+import styles from './gjenlevende.step.less';
 
 const checkboxData = [
     {

@@ -9,7 +9,7 @@ type Props = {
     routes: PropTypes.array
 }
 
-const EngangsstonadIndex = (props: Props) => {
+const GjenlevendeIndex = (props: Props) => {
     const renderRoutes = () => {
         if (props.routes) {
             return (props.routes.map((route) => (<Route {...route} key={route.path} />)));
@@ -20,9 +20,9 @@ const EngangsstonadIndex = (props: Props) => {
     const routes = renderRoutes();
 
     return (
-        <StepBasedForm routes={routes} title="Søknad om Gjenlevende" />
+        <StepBasedForm routes={routes} titleCode="index.soknad" />
     );
 };
 
 
-export default EngangsstonadIndex;
+export default GjenlevendeIndex;
