@@ -1,5 +1,5 @@
-name: presys
-image: docker.adeo.no:5000/presys
+name: pensjon-gjenlevende-selvbetjening
+image: navikt/pensjon-gjenlevende-selvbetjening
 replicas: # set min = max to disable autoscaling
   min: 1 # minimum number of replicas
   max: 1 # maximum number of replicas

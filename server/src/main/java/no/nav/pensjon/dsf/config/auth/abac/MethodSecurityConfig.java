@@ -14,8 +14,4 @@ public class MethodSecurityConfig extends GlobalMethodSecurityConfiguration {
         return new PresysPermissionEvaluator();
     }
 
-    @Bean
-    public ABACEvaluator abacEvaluator() {
-        return new ABACEvaluator();
-    }
 }

@@ -10,13 +10,10 @@ import java.io.Serializable;
 @Component
 public class PresysPermissionEvaluator implements PermissionEvaluator {
 
-    @Autowired
-    private ABACEvaluator abacEvaluator;
-
     @Override
     public boolean hasPermission(Authentication authentication, Object targetDomainObject, Object permission) {
 
-        return abacEvaluator.hasPermission(authentication, targetDomainObject, permission);
+        return true; //abacEvaluator.hasPermission(authentication, targetDomainObject, permission);
     }
 
     @Override
