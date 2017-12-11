@@ -2,11 +2,34 @@
   "FagsakSearch.ZeroSearchResults": "Søket gav ingen treff",
   "Header.Foreldrepenger": "Gjenlevende",
   "Header.Saksbehandler": "Saksbehandler",
+  "MissingPage.PageIsMissing": "Side finnes ikke",
+  "MissingPage.Home": "Hjem",
 
   "Gjenlevende.Test": "Gjenlevende",
   "index.soknad": "Søknad for gjenlevende",
 
-  "MissingPage.PageIsMissing": "Side finnes ikke",
-  "MissingPage.Home": "Hjem"
+  "Step1.IconTextCode": "Fin tekst her",
+  "Step1.DisplayTextWithLabel": "En annen tekst her",
+  "Step2.OpplysningDataLabel.Arbeidsgiver": "ARBEIDSGIVER",
+  "Step2.TextCode.Arbeidsgiver": "Nielsen Strikkfabrikk AS-(B.E.)",
+  "Step2.OpplysningDataLabel.Stillingsprosent": "STILLINGSPROSENT",
+  "Step2.TextCode.Stillingsprosent": "100 prosent fast(B.E.)",
+  "Step2.TitleCode.Arbeid": "Arbeid",
+  "Step2.radioData.sokeGjenlevende": "Ja, jag vil heller søke om gjenlevendeytelse.",
+  "Step2.radioData.kanSelv": "Nei, jeg vil klare meg selv",
+  "Step3.Alertstripe.rettPaaGjenlevende": "Du kan ha rett på gjenlevendeytelse hvis du bla bla",
+  "Step4.CheckboxData.lableCode.navn": "NAVN",
+  "Step4.CheckboxData.textCode.navn": "Lise Haugdahl (B.E)",
+  "Step4.CheckboxData.lableCode.fnr": "FØDSELSNUMMER",
+  "Step4.CheckboxData.textCode.fnr": "01010038259 (B.E)",
+  "Step5.opplysningData.labelCode1": "Label1",
+  "Step5.opplysningData.textCode1": "Text1",
+  "Step5.opplysningData.labelCode2": "Label2",
+  "Step5.opplysningData.textCode2": "Text2",
+  "Step5.opplysningData.labelCode3": "Label3",
+  "Step5.opplysningData.textCode3": "Text3",
+  "Step5.Alertstripe.rettPaaGjenlevende": "Du kan ha rett på gjenlevendeytelse hvis du bla bla arbeid opptjening",
+  "Step5.OpplysningPanel.titleCode": "Stønad",
 
+  "Slutt": "Slutt"
 }

@@ -8,14 +8,14 @@ import IconWithText from './IconWithText';
 type Props = {
     iconKind: string,
     opplysningData: Array<Object>,
-    title: string
+    titleCode: string
 };
 
 const OpplysningPanel = (props: Props) => (
     <ElementWrapper>
-        <IconWithText kind={props.iconKind} text={props.title} />
+        <IconWithText kind={props.iconKind} textCode={props.titleCode} />
         {props.opplysningData.map((opplysninger) => (
-            <DisplayTextWithLabel key={opplysninger.text} {...opplysninger} />
+            <DisplayTextWithLabel key={opplysninger.textCode} {...opplysninger} />
         ))}
     </ElementWrapper>
 );

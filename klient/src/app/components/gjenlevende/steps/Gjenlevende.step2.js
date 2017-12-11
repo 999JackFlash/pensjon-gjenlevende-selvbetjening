@@ -1,7 +1,7 @@
 import React from 'react';
 
 import AlertStripe from 'nav-frontend-alertstriper';
-
+import { FormattedMessage } from 'react-intl';
 import ElementWrapper from './../../../util/ElementWrapper';
 import RadioGroup from '../../shared/RadioGroup';
 import OpplysningPanel from '../../shared/OpplysningPanel';
@@ -10,24 +10,23 @@ import styles from './gjenlevende.step.less';
 
 const radioData = [
     {
-        label: 'Ja, jag vil heller søke om foreldrepenger.',
-        value: 'foreldrepenger'
+        label: <FormattedMessage id="Step2.radioData.sokeGjenlevende" />,
+        value: 'gjenlevende'
     },
     {
-        label: `Nei, jeg vil gå videre med denne søknaden og forstår at jeg 
-                mister retten til foreldrepenger hvis søknaden om engangsstønad blir innvilget.`,
+        label: <FormattedMessage id="Step2.radioData.kanSelv" />,
         value: 'gjenlevende'
     }
 ];
 
 const opplysningData = [
     {
-        labelCode: 'ARBEIDSGIVER',
-        textCode: 'Nielsen Strikkfabrikk AS'
+        labelCode: 'Step2.OpplysningDataLabel.Arbeidsgiver',
+        textCode: 'Step2.TextCode.Arbeidsgiver'
     },
     {
-        labelCode: 'STILLINGSPROSENT',
-        textCode: '100 prosent fast'
+        labelCode: 'Step2.OpplysningDataLabel.Stillingsprosent',
+        textCode: 'Step2.TextCode.Stillingsprosent'
     }
 ];
 
@@ -41,7 +40,7 @@ export const Step2 = () => (
         </AlertStripe>
         <OpplysningPanel
             iconKind="arbeidsgiver"
-            title="Arbeid"
+            titleCode="Step2.TitleCode.Arbeid"
             opplysningData={opplysningData}
         />
         <RadioGroup className={styles.radioGruppe} name="soknadstype" listOfRadioData={radioData} />

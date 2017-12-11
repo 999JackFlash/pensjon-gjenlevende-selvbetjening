@@ -10,12 +10,12 @@ import styles from './gjenlevende.step.less';
 
 const checkboxData = [
     {
-        label: 'NAVN',
-        text: 'Lise Haugdahl'
+        label: 'Step4.CheckboxData.lableCode.navn',
+        text: 'Step4.CheckboxData.textCode.navn'
     },
     {
-        label: 'FØDSELSNUMMER',
-        text: '01111799999'
+        label: 'Step4.CheckboxData.lableCode.fnr',
+        text: 'Step4.CheckboxData.textCode.fnr'
     }
 ];
 

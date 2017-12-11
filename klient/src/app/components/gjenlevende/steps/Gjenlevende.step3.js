@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 
 import { AlertStripeNavAnsatt } from 'nav-frontend-alertstriper';
 
@@ -12,7 +13,7 @@ export const Step3 = () => (
             className={styles.marginTopBottom}
             type="nav-ansatt"
         >
-            Du kan ha rett på foreldrepenger hvis du bla bla arbeid opptjening
+            <FormattedMessage id="Step3.Alertstripe.rettPaaGjenlevende" />
         </AlertStripeNavAnsatt>
     </ElementWrapper>
 );

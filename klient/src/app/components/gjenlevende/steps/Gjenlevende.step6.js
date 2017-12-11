@@ -13,7 +13,7 @@ import styles from './gjenlevende.step.less';
 export const Step6 = () => (
     <ElementWrapper>
         <AlertStripe className={styles.marginTopBottom} type="nav-ansatt">Her har vi noe info</AlertStripe>
-        <IconWithText kind="arbeidsgiver" text="Ladida" />
+        <IconWithText kind="arbeidsgiver" textCode="Gjenlevende.Test" />
         <Undertittel className={styles.marginTopBottom}>Placeholder</Undertittel>
         <Element className={styles.marginTopBottom}>Placeholder</Element>
         <DisplayTextWithLabel labelCode="Gjenlevende.Test" textCode="Gjenlevende.Test" />

@@ -13,10 +13,10 @@ import styles from './gjenlevende.step.less';
 export const Step1 = () => (
     <ElementWrapper>
         <AlertStripe className={styles.marginTopBottom} type="nav-ansatt">Her har vi noe info</AlertStripe>
-        <IconWithText kind="arbeidsgiver" text="Ladida" />
+        <IconWithText kind="arbeidsgiver" textCode="Step1.IconTextCode" />
         <Undertittel className={styles.marginTopBottom}>Placeholder</Undertittel>
         <Element className={styles.marginTopBottom}>Placeholder</Element>
-        <DisplayTextWithLabel labelCode="Gjenlevende.Test" textCode="Gjenlevende.Test" />
+        <DisplayTextWithLabel labelCode="Gjenlevende.Test" textCode="Step1.DisplayTextWithLabel" />
         <Radio className={styles.marginTopBottom} label="Placeholder" name="placeholder-gruppe" />
     </ElementWrapper>
 );
