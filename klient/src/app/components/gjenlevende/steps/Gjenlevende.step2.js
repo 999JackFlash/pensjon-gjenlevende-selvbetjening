@@ -11,11 +11,11 @@ import styles from './gjenlevende.step.less';
 const radioData = [
     {
         label: <FormattedMessage id="Step2.radioData.sokeGjenlevende" />,
-        value: 'gjenlevende'
+        value: 'sokeGjenlevende'
     },
     {
         label: <FormattedMessage id="Step2.radioData.kanSelv" />,
-        value: 'gjenlevende'
+        value: 'kanSelv'
     }
 ];
 
