@@ -1,23 +1,38 @@
 import React from 'react';
 
-import { Undertittel, Element } from 'nav-frontend-typografi';
 import AlertStripe from 'nav-frontend-alertstriper';
-import { Radio } from 'nav-frontend-skjema';
-
-import IconWithText from '../../shared/IconWithText';
+import { Select } from 'nav-frontend-skjema';
+import { FormattedMessage } from 'react-intl';
 import ElementWrapper from './../../../util/ElementWrapper';
-import DisplayTextWithLabel from './../../shared/DisplayTextWithLabel';
 
 import styles from './gjenlevende.step.less';
 
+
 export const Step1 = () => (
     <ElementWrapper>
-        <AlertStripe className={styles.marginTopBottom} type="nav-ansatt">Her har vi noe info</AlertStripe>
-        <IconWithText kind="arbeidsgiver" textCode="Step1.IconTextCode" />
-        <Undertittel className={styles.marginTopBottom}>Placeholder</Undertittel>
-        <Element className={styles.marginTopBottom}>Placeholder</Element>
-        <DisplayTextWithLabel labelCode="Gjenlevende.Test" textCode="Step1.DisplayTextWithLabel" />
-        <Radio className={styles.marginTopBottom} label="Placeholder" name="placeholder-gruppe" />
+        <AlertStripe className={styles.marginTopBottom} type="info">
+            <h3><FormattedMessage id="Step1.AlertStripe.text1" /></h3>
+            <div className="nav-frontend-lenker">
+                <p><FormattedMessage id="Step1.AlertStripe.text2" />&nbsp;
+                    <a href="https://www.nav.no/no/Person/Pensjon/Andre+pensjonsordninger/ytelser-til-gjenlevende-ektefelle"
+                        className='lenke'>
+                        <FormattedMessage id="Step1.urlbeskrivelse" />
+                    </a>
+               </p>
+            </div>
+        </AlertStripe>
+        <Select label={ <FormattedMessage id="Step1.velgSpraak" /> } >
+            <option value='bokmaal'key='bokmaal'>
+                <FormattedMessage id="Step1.bokmaal" />
+            </option>
+            <option value='nynorsk'key='nynorsk'>
+                <FormattedMessage id="Step1.nynorsk" />
+            </option>
+            <option value='engelsk'key='engelsk'>
+                <FormattedMessage id="Step1.engelsk" />
+            </option>
+        </Select>
+
     </ElementWrapper>
 );
 

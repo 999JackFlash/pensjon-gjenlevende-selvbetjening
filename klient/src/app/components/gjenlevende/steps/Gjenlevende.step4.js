@@ -34,7 +34,7 @@ export const Step4 = () => (
             className={styles.marginTopBottom}
             type="nav-ansatt"
         >
-            <FormattedMessage id={'Step4.AlertStripe.text'} />
+            <FormattedMessage id="Step4.AlertStripe.text" />
         </AlertStripe>
         <Undertittel className={styles.marginTopBottom}>Gjelder søknaden dette barnet?</Undertittel>
         <CheckboxWithLine content={checkboxData} className={styles.marginTopBottom} />
