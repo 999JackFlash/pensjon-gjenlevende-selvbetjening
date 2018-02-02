@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import AlertStripe from 'nav-frontend-alertstriper';
+import { EtikettLiten, Normaltekst } from 'nav-frontend-typografi';
 import { FormattedMessage } from 'react-intl';
 import { Input, Checkbox, Radio } from 'nav-frontend-skjema';
 import { connect } from 'react-redux';
@@ -8,19 +9,18 @@ import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { setSelectedStep2 } from '../../../redux/ducks/Skjema.duck';
 import ElementWrapper from './../../../util/ElementWrapper';
-import DisplayTextWithLabel from './../../shared/DisplayTextWithLabel';
 
 import styles from './gjenlevende.step.less';
 
 const radioData = [
     {
         name: 'step2radio',
-        label: <FormattedMessage id="Step8.radioData.bosattNorge" />,
+        label: <FormattedMessage id="Step2.radioData.bosattNorge" />,
         value: 'norge'
     },
     {
         name: 'step2radio',
-        label: <FormattedMessage id="Step8.radioData.bosattUtland" />,
+        label: <FormattedMessage id="Step2.radioData.bosattUtland" />,
         value: 'utland'
     }
 ];
@@ -39,20 +39,35 @@ const radioUtlandData = [
     },
     {
         name: 'step2UtlandRadio',
-        label: <FormattedMessage id="Step2.radioUtlandData.menC2" />,
+        label: <FormattedMessage id="Step2.radioUtlandData.og1" />,
         value: 'menC'
     },
     {
         name: 'step2UtlandRadio',
-        label: <FormattedMessage id="Step2.radioUtlandData.menD2" />,
+        label: <FormattedMessage id="Step2.radioUtlandData.og2" />,
         value: 'menD'
     }
 
 ];
 
+const radioNavSakerData = [
+    {
+        name: 'step2radioNavSaker',
+        label: <FormattedMessage id="Step8.radioNavSakerData.harIngen" />,
+        value: 'harIngen'
+    },
+    {
+        name: 'step2radioNavSaker',
+        label: <FormattedMessage id="Step8.radioNavSakerData.harSaker" />,
+        value: 'harSaker'
+    }
+];
+
+
 type Props = {
     selectedLokasjon: PropTypes.string,
-    selectedUtlandKlausul: PropTypes.string
+    selectedUtlandKlausul: PropTypes.string,
+    selectedNavSakStatus: PropTypes.string
 }
 
 export const Step2inner = (props: Props) => (
@@ -68,87 +83,149 @@ export const Step2inner = (props: Props) => (
         <Radio
             {...radioData[0]}
             onChange={(event) => props.setValgtLokasjon(event.target.value)}
-            checked={props.selectedLokasjon === radioData[0].value}
+            checked={props.selectedLokasjon === radioData[0].value, props.setValgtUtlandKlausul === null}
         />
         <Radio
             {...radioData[1]}
             onChange={(event) => props.setValgtLokasjon(event.target.value)}
             checked={props.selectedLokasjon === radioData[1].value}
         />
-        {props.selectedLokasjon !== radioData[0].value? null:
-            <DisplayTextWithLabel labelCode="blank" textCode="Step2.pnr_tekst" />
-        }
-        {props.selectedLokasjon !== radioData[0].value? null:
-            <Input
-                label="Postnummer"
-                name="postnr"
-                bredde="XS"
-            />
-        }
-        {props.selectedLokasjon !== radioData[0].value? null:
-            <DisplayTextWithLabel labelCode="blank" textCode="Step2.fnr_tekst" />
-        }
-        {props.selectedLokasjon !== radioData[0].value? null:
-            <Input
-                label="Fødselsnummer"
-                name="fnr"
-                bredde="S"
-            />
+        {props.selectedLokasjon !== radioData[0].value ? null:
+            <Fragment>
+                <br></br>
+                <Normaltekst className={styles.marginLeft1Step}><FormattedMessage id="Step2.pnr_tekst" /></Normaltekst>
+                <br></br>
+                <Input
+                    className={styles.marginLeft1Step}
+                    label={<FormattedMessage id="Step2.postnummer" />}
+                    name="postnr"
+                    bredde="XS"
+                />
+                <Normaltekst className={styles.marginLeft1Step}><FormattedMessage id="Step2.fnr_tekst" /></Normaltekst>
+                <br></br>
+                <Input
+                    className={styles.marginLeft1Step}
+                    label={<FormattedMessage id="Step2.fodselsnummer" />}
+                    name="fnr"
+                    bredde="S"
+                />
+            </Fragment>
         }
 
-        {props.selectedLokasjon !== radioData[1].value?null:
+        {props.selectedLokasjon !== radioData[1].value ? null:
             <Radio
                 {...radioUtlandData[0]}
+                className={styles.marginLeft1Step}
                 onChange={(event) => props.setValgtUtlandKlausul(event.target.value)}
                 checked={props.selectedUtlandKlausul === radioUtlandData[0].value}
             />
         }
-        {props.selectedUtlandKlausul !== radioUtlandData[0].value? null:
+        {props.selectedUtlandKlausul !== radioUtlandData[0].value ? null:
             <Fragment>
-                <DisplayTextWithLabel labelCode="Step2.adresseNorge" textCode="Step2.adresseforklaring" />
+                <EtikettLiten className={styles.marginLeft2Step}>
+                    <FormattedMessage id="Step2.adresseNorge" />
+                </EtikettLiten>
+                <Normaltekst className={styles.marginLeft2Step}>
+                    <FormattedMessage id="Step2.adresseforklaring" />
+                </Normaltekst>
                 <Input
+                    className={styles.marginLeft2Step}
                     label={<FormattedMessage id="Step2.co-adresse" />}
                     name="utlandAdresse"
                 />
                 <Input
+                    className={styles.marginLeft2Step}
                     label={<FormattedMessage id="Step2.postnummer" />}
                     name="utlandPostnr"
                     bredde="S"
                 />
-                <DisplayTextWithLabel labelCode="blank" textCode="Step2.fnr_tekst" />
+                <Normaltekst className={styles.marginLeft2Step}>
+                    <FormattedMessage id="Step2.fnr_tekst" />
+                </Normaltekst>
                 <Input
+                    className={styles.marginLeft2Step}
                     label={<FormattedMessage id="Step2.fodselsnummer" />}
                     name="utlandFnr"
                     bredde="S"
                 />
                 <Checkbox
-                    label="Jeg har vært i kontakt med NAV tidligere"
+                    className={styles.marginLeft2Step}
+                    label={<FormattedMessage id="Step2.checkNavKontakt" />}
                     id="kontaktetNav"
                 />
-                <DisplayTextWithLabel labelCode="blank" textCode="Step2.kontaktetNav" />
+                <Normaltekst className={styles.marginLeft2Step}>
+                    <FormattedMessage id="Step2.kontaktetNav" />
+                </Normaltekst>
                 <Input
+                    className={styles.marginLeft2Step}
                     label={<FormattedMessage id="Step2.navEnhet" />}
                     name="utlandNavEnhet"
                 />
             </Fragment>
         }
-        {props.selectedLokasjon !== radioData[1].value?null:
+        {props.selectedLokasjon !== radioData[1].value ? null:
             <Radio
                 {...radioUtlandData[1]}
+                className={styles.marginLeft1Step}
                 onChange={(event) => props.setValgtUtlandKlausul(event.target.value)}
                 checked={props.selectedUtlandKlausul === radioUtlandData[1].value}
             />
         }
-        {props.selectedLokasjon !== radioData[1].value?null:
+        {props.selectedUtlandKlausul !== radioUtlandData[1].value ? null:
+            <Fragment>
+                <Normaltekst className={styles.marginLeft2Step}>
+                    <FormattedMessage id="Step2.fnr_tekst" />
+                </Normaltekst>
+                <br></br>
+                <Input
+                    className={styles.marginLeft2Step}
+                    label={<FormattedMessage id="Step2.fodselsnummer" />}
+                    name="utlandFnr"
+                    bredde="S"
+                />
+                <Fragment>
+                    <Radio
+                        {...radioNavSakerData[0]}
+                        className={styles.marginLeft2Step}
+                        onChange={(event) => props.setNavSakStatus(event.target.value)}
+                        checked={props.selectedNavSakStatus === radioNavSakerData[0].value}
+                    />
+                    <Radio
+                        {...radioNavSakerData[1]}
+                        className={styles.marginLeft2Step}
+                        onChange={(event) => props.setNavSakStatus(event.target.value)}
+                        checked={props.selectedNavSakStatus === radioNavSakerData[1].value}
+                    />
+                    {props.selectedNavSakStatus !== radioNavSakerData[1].value ? null:
+                        <Fragment>
+                            <Normaltekst className={styles.marginLeft3Step}>
+                                <FormattedMessage id="Step8.radioNavSakerData.harSaker.lokalkontor" />
+                            </Normaltekst>
+                            <br></br>
+                            <Input
+                                className={styles.marginLeft3Step}
+                                label={<FormattedMessage id="Step8.radioNavSakerData.harSaker.input" />}
+                                name="navenhet"
+                                bredde="L"
+                            />
+                        </Fragment>
+                    }
+                </Fragment>
+
+            </Fragment>
+        }
+        {props.selectedLokasjon !== radioData[1].value ? null:
             <Radio
                 {...radioUtlandData[2]}
+                className={styles.marginLeft1Step}
                 onChange={(event) => props.setValgtUtlandKlausul(event.target.value)}
                 checked={props.selectedUtlandKlausul === radioUtlandData[2].value}
             />
         }
-        {props.selectedLokasjon !== radioData[1].value?null:
+        {props.selectedLokasjon !== radioData[1].value ? null:
             <Radio
                 {...radioUtlandData[3]}
+                className={styles.marginLeft1Step}
                 onChange={(event) => props.setValgtUtlandKlausul(event.target.value)}
                 checked={props.selectedUtlandKlausul === radioUtlandData[3].value}
             />
@@ -159,13 +236,15 @@ export const Step2inner = (props: Props) => (
 
 const mapStateToProps = (state) => ({
     selectedLokasjon: state.skjema.step2.lokasjon,
-    selectedUtlandKlausul: state.skjema.step2.utlandKlausul
+    selectedUtlandKlausul: state.skjema.step2.utlandKlausul,
+    selectedNavSakStatus: state.skjema.step2.navSakStatus
 });
 
 const mapDispatchToProps = (dispatch) => ({
     ...bindActionCreators({
         setValgtLokasjon: (value) => setSelectedStep2(value, 'lokasjon'),
-        setValgtUtlandKlausul: (value) => setSelectedStep2(value, 'utlandKlausul')
+        setValgtUtlandKlausul: (value) => setSelectedStep2(value, 'utlandKlausul'),
+        setNavSakStatus: (value) => setSelectedStep2(value, 'navSakStatus')
     }, dispatch)
 });
 

@@ -17,7 +17,7 @@ type Props = {
 export const IconWithText = (props: Props) => (
     <ElementWrapper>
         <Icon kind={props.kind} className={styles.image} />
-        <Undertittel className={styles.text}><FormattedMessage id="Step1.IconTextCode" /></Undertittel>
+        <Undertittel className={styles.text}><FormattedMessage id={props.textCode} /></Undertittel>
     </ElementWrapper>
 );
 
