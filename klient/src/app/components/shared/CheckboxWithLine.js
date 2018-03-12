@@ -23,7 +23,7 @@ export const CheckboxWithLine = (props: Props) => {
             <Checkbox label=" " />
             <div className={styles.content}>
                 {props.content.map((entry) =>
-                    <DisplayTextWithLabel labelCode={entry.label} textCode={entry.text} />)}
+                    <DisplayTextWithLabel labelCode={entry.label} textCode={entry.text} key={entry.label} />)}
             </div>
         </div>
     );
