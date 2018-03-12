@@ -8,6 +8,7 @@ export const setSelected = (value, field, step) => {
 };
 
 export const setSelectedStep2 = (value, field) => setSelected(value, field, 'step2');
+export const setSelectedStep3 = (value, field) => setSelected(value, field, 'step3');
 
 
 import {

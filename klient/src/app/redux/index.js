@@ -5,6 +5,8 @@ import {
 } from 'redux';
 import counterReducer from './ducks/Counter.duck';
 import skjema from './ducks/Skjema.duck';
+import person from './ducks/Person.duck';
+
 
 
 const logger = (store) => (next) => (action) => {
@@ -17,7 +19,7 @@ const logger = (store) => (next) => (action) => {
     return result;
 };
 
-const reducers = combineReducers({ counterReducer, skjema });
+const reducers = combineReducers({ counterReducer, skjema, person });
 
 const createStoreWithMiddleware = applyMiddleware(logger)(createStore);
 const store = createStoreWithMiddleware(reducers);

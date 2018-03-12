@@ -4,12 +4,14 @@ import AlertStripe from 'nav-frontend-alertstriper';
 import { Select } from 'nav-frontend-skjema';
 import { FormattedMessage } from 'react-intl';
 import ElementWrapper from './../../../util/ElementWrapper';
+import Person from '../../Person';
 
 import styles from './gjenlevende.step.less';
 
 
 export const Step1 = () => (
     <ElementWrapper>
+        <Person />
         <AlertStripe className={styles.marginTopBottom} type="info">
             <h3><FormattedMessage id="Step1.AlertStripe.text1" /></h3>
             <div className="nav-frontend-lenker">

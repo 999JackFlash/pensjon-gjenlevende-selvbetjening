@@ -45,6 +45,7 @@
     "test": "mocha --opts ./mocha.opts ./src/app/**/*.spec.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
     "classnames": "^2.2.5",
     "lodash.throttle": "^4.1.1",
@@ -60,7 +61,7 @@
     "nav-frontend-js-utils": "^0.2.10",
     "nav-frontend-knapper": "^0.2.14",
     "nav-frontend-knapper-style": "^0.3.5",
-    "nav-frontend-panelear-style": "^0.3.7",
+    "nav-frontend-paneler-style": "^0.3.7",
     "nav-frontend-skjema": "^0.1.21",
     "nav-frontend-skjema-style": "^0.3.11",
     "nav-frontend-typografi": "^1.0.12",
